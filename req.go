@@ -33,9 +33,9 @@ func SynonymReq(Input string) *Resp {
 	r := new(Resp)
 
 	err = json.Unmarshal([]byte(body), &r)
-	if err != nil{
+	if err != nil {
 		log.Fatalln("Failed to unmarshal response: ", err)
 	}
 
-	return r;
+	return r
 }

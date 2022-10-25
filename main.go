@@ -6,14 +6,15 @@ import (
 	"os"
 )
 
-
-func main(){
+func main() {
 	os.Setenv("THESAURUS_API_KEY", "USER DEFINED")
 
 	for {
-		log.Print("Enter Term (Synonym): "); input := new(string); fmt.Scan(input)
+		log.Print("Enter Term (Synonym): ")
+		input := new(string)
+		fmt.Scan(input)
 		var s *Resp = SynonymReq(*input)
-		for _, item := range *s{
+		for _, item := range *s {
 			if item.Meta.ID == *input {
 				for _, item := range item.Meta.Syns {
 					for _, i := range item {
@@ -21,10 +22,10 @@ func main(){
 					}
 				}
 			}
-			
+
 		}
 	}
-	
+
 }
 
 type Resp []ResponseElement
