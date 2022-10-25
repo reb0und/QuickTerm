@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	os.Setenv("THESAURUS_API_KEY", "3794032c-4efe-4e3b-bc2a-6daceb97794e")
+	os.Setenv("THESAURUS_API_KEY", "USER DEFINED")
 
 	for {
 		log.Print("Enter Term (Synonym): ")
